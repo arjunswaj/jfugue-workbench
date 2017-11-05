@@ -98,7 +98,7 @@ public class BasicNoteFinder implements NoteFinder {
         }
         NoteWithContext.ProgressionType progressionType;
         if (hasCrossedOverLast && (note.getAarohaNumber() >= maxDeviation)) {
-            progressionType = nextScale < currentNote.getScale() ? AAROHA : AVAROHA;
+            progressionType = nextScale <= currentNote.getScale() ? AAROHA : AVAROHA;
         } else {
             progressionType = (null == note.getNext()) ? AVAROHA : AAROHA;
         }
@@ -137,7 +137,7 @@ public class BasicNoteFinder implements NoteFinder {
         }
         NoteWithContext.ProgressionType progressionType;
         if (hasCrossedOverFirst && (note.getAvarohaNumber() >= maxDeviation)) {
-            progressionType = nextScale < currentNote.getScale() ? AAROHA : AVAROHA;
+            progressionType = nextScale <= currentNote.getScale() ? AAROHA : AVAROHA;
         } else {
             progressionType = (null == note.getPrevious()) ? AAROHA : AVAROHA;
         }

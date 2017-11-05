@@ -154,6 +154,20 @@ public class BasicNoteFinderTest {
         assertEquals(AAROHA, result.getProgressionType());
     }
 
+    @Test
+    public void findNext_ForLastNoteAarohaRandomGivesNegative1_ReturnsNoteWithContext() throws Exception {
+        when(random.nextBoolean()).thenReturn(false);
+        when(random.nextInt(MAX_NEGATIVE)).thenReturn(1);
+        val raag = RaagGenerator.getRaag(MIYAN_KI_MALHAR);
+        val scale = 5;
+        val noteWithContext = new NoteWithContext(raag.getFirstAvaroha(), scale, false, false, AAROHA);
+        val result = noteFinder.findNext(raag, noteWithContext);
+        assertEquals(B + b, result.getNote()
+                .toString());
+        assertEquals(scale, result.getScale());
+        assertEquals(AAROHA, result.getProgressionType());
+    }
+
     // Avaroha tests
 
     @Test
@@ -257,4 +271,17 @@ public class BasicNoteFinderTest {
         assertEquals(AVAROHA, result.getProgressionType());
     }
 
+    @Test
+    public void findNext_ForLastNoteAvarohaRandomGivesPositive1_ReturnsNoteWithContext() throws Exception {
+        when(random.nextBoolean()).thenReturn(true);
+        when(random.nextInt(MAX_POSITIVE)).thenReturn(1);
+        val raag = RaagGenerator.getRaag(MIYAN_KI_MALHAR);
+        val scale = 5;
+        val noteWithContext = new NoteWithContext(raag.getFirstAaroha(), scale, false, false, AVAROHA);
+        val result = noteFinder.findNext(raag, noteWithContext);
+        assertEquals(B, result.getNote()
+                .toString());
+        assertEquals(scale - 1, result.getScale());
+        assertEquals(AVAROHA, result.getProgressionType());
+    }
 }
