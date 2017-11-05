@@ -117,7 +117,7 @@ public class RaagGenerator {
         return Raag.builder()
                 .list(a1)
                 .firstAaroha(a1)
-                .firstAvaroha(a7)
+                .firstAvaroha(a8)
                 .name(MIYAN_KI_MALHAR)
                 .build();
     }
