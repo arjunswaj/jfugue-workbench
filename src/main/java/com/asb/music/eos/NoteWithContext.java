@@ -16,6 +16,7 @@ public class NoteWithContext {
 
     private Note note;
     private int scale;
-    private boolean completedLoop;
+    private boolean crossedOverLast;
+    private boolean crossedOverFirst;
     private ProgressionType progressionType;
 }
