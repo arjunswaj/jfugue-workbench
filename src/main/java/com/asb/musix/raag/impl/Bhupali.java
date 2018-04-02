@@ -13,14 +13,14 @@ public class Bhupali implements Raag {
     private final Note startingNote;
 
     public Bhupali() {
-        startingNote = new Note("C");
+        startingNote = new Note("C#");
         startingNote.setIncForward(true);
         startingNote.setDecBackward(true);
 
-        val d = new Note("D");
-        val e = new Note("E");
-        val g = new Note("G");
-        val a = new Note("A");
+        val d = new Note("D#");
+        val e = new Note("E#");
+        val g = new Note("G#");
+        val a = new Note("A#");
 
         startingNote.setNext(d);
         d.setNext(e);
