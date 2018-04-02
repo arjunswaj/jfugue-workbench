@@ -14,8 +14,7 @@ public class Bhupali implements Raag {
 
     public Bhupali() {
         startingNote = new Note("C#");
-        startingNote.setIncForward(true);
-        startingNote.setDecBackward(true);
+        startingNote.setStart(true);
 
         val d = new Note("D#");
         val e = new Note("E#");

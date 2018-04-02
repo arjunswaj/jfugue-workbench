@@ -13,6 +13,5 @@ public class Note {
     private final String name;
     private Note next;
     private Note previous;
-    private boolean incForward;
-    private boolean decBackward;
+    private boolean start;
 }
