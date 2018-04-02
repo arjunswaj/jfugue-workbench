@@ -25,13 +25,13 @@ public class Composer {
             if (RANDOM.nextInt() % 3 != 0) {
                 if (null != s.getNext()) {
                     s = s.getNext();
-                    if (s.isStart()) {
+                    if (s.isIncForward()) {
                         curScale += 1;
                     }
                 }
             } else {
                 if (null != s.getPrevious()) {
-                    if (s.isStart()) {
+                    if (s.isDecBackward()) {
                         curScale -= 1;
                     }
                     s = s.getPrevious();
