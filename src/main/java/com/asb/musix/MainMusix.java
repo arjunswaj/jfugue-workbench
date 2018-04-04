@@ -1,7 +1,7 @@
 package com.asb.musix;
 
 import com.asb.musix.composer.SimpleTuneComposer;
-import com.asb.musix.raag.impl.MeghMalhar;
+import com.asb.musix.raag.impl.MeghMalharWithStructure;
 import lombok.val;
 import org.jfugue.pattern.Pattern;
 import org.jfugue.player.Player;
@@ -14,7 +14,7 @@ public class MainMusix {
 
     public static void main(String[] args) {
         val tuneComposer = new SimpleTuneComposer();
-        val meghMalhar = new MeghMalhar();
+        val meghMalhar = new MeghMalharWithStructure();
 
         val musix = tuneComposer.apply(meghMalhar.get(), 50);
         System.out.println(musix);
