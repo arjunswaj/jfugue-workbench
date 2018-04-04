@@ -16,12 +16,12 @@ public class MainMusix {
         val tuneComposer = new SimpleTuneComposer();
         val meghMalhar = new MeghMalharWithStructure();
 
-        val musix = tuneComposer.apply(meghMalhar.get(), 50);
+        val musix = tuneComposer.apply(meghMalhar.get(), 500);
         System.out.println(musix);
 
         val pattern = new Pattern(musix)
                 .setInstrument("Violin")
-                .setTempo(100);
+                .setTempo(64);
         val player = new Player();
         player.play(pattern);
     }

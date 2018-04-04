@@ -16,7 +16,7 @@ public class SimpleTuneComposer implements BiFunction<Note, Integer, String> {
     private IndianToLetterNotation notationConverter = new
             IndianToLetterNotation();
 
-    private Random random = new Random(8);
+    private Random random = new Random();
 
     private static final Integer INIT_SCALE = 5;
 
